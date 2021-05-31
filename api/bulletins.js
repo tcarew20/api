@@ -7,10 +7,10 @@ const router = express.Router();
 router.get('/', async (req, res) => {
     try {
         const getBulletins = await Bulletins.find();
-        res.json(getBulletins)
+        res.json(getBulletins);
 
     } catch (error) {
-        res.json({message:error})
+        res.json({message:error});
     }
 });
 
@@ -20,7 +20,7 @@ router.get('/:id', async (req, res) => {
         const found = await Bulletins.findOne({_id: req.params.id});
         res.json(found);
     } catch (error) {
-        res.json({message: error})
+        res.json({message: error});
     }
 });
 

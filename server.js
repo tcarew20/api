@@ -4,7 +4,7 @@ const cors = require('cors');
 require('dotenv/config');
 
 const app = express();
-const bulletinsRoute = require('./api/bulletins.js')
+const bulletinsRoute = require('./api/bulletins.js');
 
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
@@ -16,6 +16,6 @@ mongoose.connect(process.env.CONNECTION_URL, {useNewUrlParser: true, useUnifiedT
 
 mongoose.set('useFindAndModify', false);
 
-app.listen(process.env.PORT, () => console.log(`Server running on ${process.env.PORT}`))
+app.listen(process.env.PORT, () => console.log(`Server running on ${process.env.PORT}`));
 
 
